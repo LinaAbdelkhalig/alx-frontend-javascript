@@ -3,7 +3,7 @@ export default function (mathFunction) {
   try {
     queue.push(mathFunction());
   } catch (e) {
-    queue.push('Guardrail was processed');
+    queue.push(`Error: ${e.message}`);
   }
   queue.push('Guardrail was processed');
   return queue;
